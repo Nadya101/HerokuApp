@@ -19,8 +19,8 @@ public class AddOrRemoveElementTest {
         driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
         driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
         driver.findElement(By.xpath("//*[@onclick='deleteElement()']")).click();
-        List<WebElement> allDeleteBtn = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
-        Assert.assertEquals(allDeleteBtn.size(), 1);
+        List<WebElement> deleteButtonList = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        Assert.assertEquals(deleteButtonList.size(), 1);
         driver.quit();
     }
 }

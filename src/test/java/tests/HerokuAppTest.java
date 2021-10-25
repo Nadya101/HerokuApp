@@ -22,10 +22,8 @@ public class HerokuAppTest {
         WebElement inputField = driver.findElement(By.tagName("input"));
         inputField.sendKeys("1111");
         String textFromInputField = inputField.getAttribute("value");
-        Assert.assertEquals(textFromInputField, "1111", "Test should pass");
+        Assert.assertEquals(textFromInputField, "1111", "Text from input field doesn't " +
+                "contain entered symbols!");
         driver.quit();
-
     }
-
-
 }

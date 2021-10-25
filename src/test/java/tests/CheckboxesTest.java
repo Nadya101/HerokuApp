@@ -13,30 +13,44 @@ import org.testng.annotations.Test;
  */
 public class CheckboxesTest {
     @Test
-    public void checkboxesTest() {
+    public void isSelectedFistCheckboxTest() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        ChromeOptions chromeOptions = new ChromeOptions();
         WebDriver driver = new ChromeDriver();
         driver.get("http://the-internet.herokuapp.com/checkboxes");
-        //check if checkbox 1 is selected
-        WebElement checkboxUnselected = driver.findElement(By.xpath("//*[@type = 'checkbox'][1]"));
-        Assert.assertEquals(checkboxUnselected.isSelected(), false, "Error");
-        checkboxUnselected.click();
-        if(checkboxUnselected.isSelected()){
-            System.out.println("First checkbox is selected!");
-        }
-        else{
-            System.out.println("First checkbox isn't still selected!");
-        }
-        //check if checkbox 2 is selected
-        WebElement checkboxSelected = driver.findElement(By.xpath("//*[@type = 'checkbox'][2]"));
-        Assert.assertEquals(checkboxSelected.isSelected(), true, "Error");
-        checkboxSelected.click();
-        if(checkboxSelected.isSelected()){
-            System.out.println("Second checkbox is selected");
-        }else{
-            System.out.println("Second checkbox isn't selected!");
-        }
+        WebElement firstCheckbox = driver.findElement(By.xpath("//*[@type = 'checkbox'][1]"));
+        Assert.assertFalse(firstCheckbox.isSelected());
+        driver.quit();
+    }
+
+    @Test
+    public void isSelectedSecondCheckboxTest() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://the-internet.herokuapp.com/checkboxes");
+        WebElement secondCheckbox = driver.findElement(By.xpath("//*[@type = 'checkbox'][2]"));
+        Assert.assertTrue(secondCheckbox.isSelected());
+        driver.quit();
+    }
+
+    @Test
+    public void changeSelectedFirstCheckboxTest() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://the-internet.herokuapp.com/checkboxes");
+        WebElement firstCheckbox = driver.findElement(By.xpath("//*[@type = 'checkbox'][1]"));
+        firstCheckbox.click();
+        Assert.assertTrue(firstCheckbox.isSelected());
+        driver.quit();
+    }
+
+    @Test
+    public void changeSelectedSecondCheckboxTest() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://the-internet.herokuapp.com/checkboxes");
+        WebElement secondCheckbox = driver.findElement(By.xpath("//*[@type = 'checkbox'][2]"));
+        secondCheckbox.click();
+        Assert.assertFalse(secondCheckbox.isSelected());
         driver.quit();
     }
 }
