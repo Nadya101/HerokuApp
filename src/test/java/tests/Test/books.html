@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="books.css" type="text/css"/>
+    <title>Books</title>
+</head>
+
+<body>
+<div class="header">
+    <h1 class="main_title">The Greatest Books of All Time</h1>
+    <input class="search" placeholder="Finding a Book" type="text">
+    <button class="btn">SEARCH</button>
+    <img src="img/main_doc.jpg">
+</div>
+
+<select>
+    <option>New Releases This Week</option>
+    <option>Italian Cookbooks</option>
+    <option>Tenaciously Terrifying</option>
+    <option>Financial Freedom for All!</option>
+    <option selected="selected">The Greatest Books</option>
+    <option>Books for Bluestockings - Strength in Stories for LIA</option>
+</select>
+
+<p>This list is generated from 130 "best of" book lists from a variety of great sources. An algorithm is used
+    to create a master list based on how many lists a particular book appears on.
+    Some lists count more than others. I generally trust "best of all time" lists voted by authors and experts
+    over user-generated lists.</p>
+<table>
+    <tr>
+        <th>Author</th>
+        <th>Name</th>
+        <th>Select</th>
+    </tr>
+    <tr>
+        <td>Marcel Proust</td>
+        <td><a href="https://en.wikipedia.org/wiki/In_Search_of_Lost_Time">In Search of Lost Time</a></td>
+        <td>
+            <input type="checkbox" id="book1_1" value="I've read this book.">
+            <label for="book1_1"> I've read this book</label><br>
+            <input type="checkbox" id="book1_2" value="I want to read this book." checked>
+            <label for="book1_2"> I want to read this book</label>
+        </td>
+    </tr>
+    <tr>
+        <td> James Joyce</td>
+        <td><a href="https://en.wikipedia.org/wiki/Ulysses_(novel)"> Ulysses</a></td>
+        <td>
+            <input type="checkbox" id="book2_1" value="I've read this book.">
+            <label for="book2_1"> I've read this book</label><br>
+            <input type="checkbox" id="book2_2" value="I want to read this book." checked>
+            <label for="book2_2"> I want to read this book</label>
+        </td>
+    </tr>
+    <tr>
+        <td>Gabriel Garcia Marquez</td>
+        <td><a href="https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude">
+            One Hundred Years of Solitude</a></td>
+        <td>
+            <input type="checkbox" id="book3_1" value="I've read this book.">
+            <label for="book3_1"> I've read this book</label><br>
+            <input type="checkbox" id="book3_2" value="I want to read this book." checked>
+            <label for="book3_2"> I want to read this book</label>
+        </td>
+    </tr>
+    <tr>
+        <td>F. Scott Fitzgerald</td>
+        <td><a href="https://en.wikipedia.org/wiki/The_Great_Gatsby">The Great Gatsby</a></td>
+        <td>
+            <input type="checkbox" id="book4_1" value="I've read this book.">
+            <label for="book4_1"> I've read this book</label><br>
+            <input type="checkbox" id="book4_2" value="I want to read this book." checked>
+            <label for="book4_2"> I want to read this book</label>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
