@@ -26,4 +26,7 @@ public class HerokuAppTest {
                 "contain entered symbols!");
         driver.quit();
     }
+
+    public static class DynamicControls {
+    }
 }
